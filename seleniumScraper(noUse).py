@@ -85,14 +85,3 @@ chapter_link = input("Paste the chapter link: ")
 browser.get(chapter_link)
 # r = browser.execute_script("return window.performance.getEntries();")
 # .......................................................................................................................
-
-
-def get_video_data(index):
-
-    # i = 30
-    # while (i > 0):
-    #     time.sleep(1)
-    #     i = i-1
-    #     print('Sleep time left: '+str(i))
-
-    # quit()

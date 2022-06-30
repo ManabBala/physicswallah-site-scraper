@@ -3,7 +3,7 @@ from sys import float_repr_style
 import requests
 
 
-def getVideoLink(topicTag):
+def getVideoLink(topicId):
     headers = {
         'authority': 'api.penpencil.xyz',
         'accept': 'application/json, text/plain, */*',
@@ -30,13 +30,13 @@ def getVideoLink(topicTag):
         'page': '1',
         'contentType': 'videos',
         # 'tag': '61612c214044e0001819ff92',
-        'tag': topicTag,
+        'tag': topicId,
     }
 
     response = requests.get(
         'https://api.penpencil.xyz/v2/batches/613f3f0b09fa3d001891a954/subject/613f3f7057bc670018c7f645/contents', params=params, headers=headers)
     jsonData = json.loads(response.text)
-    # print(jsonData['data'][1]['_id'])
+
     return jsonData['data']
 
 
